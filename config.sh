@@ -52,9 +52,7 @@ MINAPI=28
 
 # Custom Variables for Install AND Uninstall - Keep everything within this function - runs before uninstall/install
 unity_custom() {
-  if [ -f $VEN/build.prop ]; then BUILDS="/system/build.prop $VEN/build.prop"; else BUILDS="/system/build.prop"; fi
-  OP3=$(grep -E "ro.build.product=OnePlus3.*|ro.build.product=oneplus3.*|ro.vendor.product.device=oneplus3.*|ro.vendor.product.device=OnePlus3.*" $BUILDS)
-  [ "$OP3" ] && abort "OnePlus3(T) is not supported for now."
+  :
 }
 
 # Things that ONLY run during an upgrade (occurs after unity_custom) - you probably won't need this
